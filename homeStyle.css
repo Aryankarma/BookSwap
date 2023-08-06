@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden ;
+}
+/* color palette */
+:root{
+    --primary : #F2EEE4;
+    --secondary : #20262E;
+    --tertiary: #EF9648;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.top{
+    width: 100vw;
+    height:100vh;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .4) 50%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.2) 100%),url(images/bg.jpg);
+    /* background-image: url(images/bg.jpg); */
+    /* background-size: 100% auto; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    height: 13vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.links{
+    display: flex;
+    gap: 5.5vw;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+}
+.links a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 1.5px;
+}
+.links a:hover{
+    text-decoration-color: var(--tertiary);
+    text-decoration-line: underline;
+}
+.profile{
+    width: fit-content;
+    position: absolute;
+    right: 6rem;
+    bottom: -1rem;
+    font-size: 3rem;
+}
+.profile a{
+    color: white;
+    text-decoration: none;
+}
+.headings{
+    margin-top: 7rem;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.headings span{
+    color: var(--tertiary);
+}
+.headings h1{
+    /* padding: 0 12%; */
+    width: 70%;
+    justify-content: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+.headings h4{
+    text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    margin-top: 1rem;
+    /* padding:0 17%; */
+    width: 65%;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.btn{
+    position: absolute;
+    bottom: 4rem;
+    right: 3rem;
+}
+.btn button{
+    font-size: 1.2rem;
+    font-weight: 200 !important;
+    letter-spacing: 2px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+    /* border-radius: 80% 20%; */
+    border: 0;
+    border-radius: 6px;
+}
+.btn button:hover{
+    opacity: 0.8;
+    transition: 200ms;
+}
+.btn button span{
+    color: var(--tertiary);
+    /* position: relative; */
+}
+/* .btn button span i{
+    position: absolute;
+    bottom: 0;
+} */
+.books{
+    display: flex;
+    flex-direction: column !important;
+    padding: 2rem;
+    background-color: white;
+}
+.head{
+    padding: 2rem;
+}
+.head h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-align: center;
+}
+.books{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin:  0 3rem; */
+    width: 17%;
+}
+.book img{
+    height: 200px;
+    margin-bottom: 1rem;
+    size: cover;
+}
+.insideBook{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.insideBook button{
+    width: 5rem;
+    font-size: 1.2rem;
+    font-weight: 200 !important;
+    /* background-color: var(--secondary);
+    color: var(--primary); */
+    padding: .3rem;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 1rem;
+
+    /* only when desabled */
+    background-color: var(--primary);
+    color: var(--secondary);
+    opacity: 0.8;
+}
+.insideBook button:hover{
+    opacity: 0.65;
+    transition: 200ms;
+}
+.book h4,.book p{
+    font-size: 1.1rem;
+}
+.more{
+    padding: 3rem;
+    position: relative;
+}
+.more button{
+    position: absolute;
+    bottom: 30%;
+    right: 3rem;
+    width: 12rem;
+    font-size: 1.2rem;
+    font-weight: 200 !important;
+    letter-spacing: 2px;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 0.8rem 1.4rem;
+    /* border-radius: 80% 20%; */
+    border: 0;
+    border-radius: 6px;
+}
+.more button:hover{
+    opacity: 0.95;
+    transition: 200ms;
+}
+.more button span{
+    /* position: relative; */
+}
+.more button span i{
+    /* position: absolute; */
+    /* bottom: 0;
+    left: 0.2rem; */
+}
+.about{
+    background-color: var(--primary);
+    padding: 3rem 0;
+}
+.about h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+    text-align: center;
+    letter-spacing: 2px;
+}
+.about hr{
+    border: none;
+    border-top: 6px solid var(--tertiary);
+    outline: none;
+    margin: 1.25rem 0;
+}
+.about h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    word-spacing: 2rem;
+    color: var(--secondary);
+    text-align: center;
+    letter-spacing: .7rem;
+}
+
+.bookShow{
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.bookShow p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2.5rem;
+}
