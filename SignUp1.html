@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SignUpStyles.css">
+    <title>BookSwap</title>
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/04dc8a005d.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- how i used google drive img link to showup on website -->
+    <!-- Example of Embedding a Google Drive Image
+    Original URL: https://drive.google.com/file/d/0B6wwyazyzml-OGQ3VUo0Z2thdmc/view
+    You need to copy the ID from the original URL (the characters between the /d/ and /view),
+    and use it in this URL:
+    https://drive.google.com/uc?export=view&id=0B6wwyazyzml-OGQ3VUo0Z2thdmc -->
+
+    <div id="top">
+        <div id="signIn">
+            <div id="top-heading1">
+                <h1>BookSwap <img id="img1" src="./images/handshake_cropped.png" alt=""></h1>
+            </div>
+            <form method="post" action="/login">
+                <div id="top-heading2">
+                    <h2>Sign Up</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Your Name <span>*</span></label>
+                    <input type="name" id="name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span>*</span></label> <br>
+                    <input type="email" id="email" name="email"> 
+                </div>
+                
+                <div class="form-group">
+                    <label for="Number">Phone Number <span>*</span></label><br>
+                    <input type="Number" id="Number" name="Number">
+                    <!-- <i id="hide" onclick="changePass()" class="fa-solid fa-eye-slash"></i><i id="show" onclick="changePass()" class="fa-solid fa-eye"></i> -->
+                </div>
+                
+                <div id="radio">
+                    <input type="checkbox" name="TandC" id="TandC"> 
+                    <label for="TandC">I accept <a href="http://" target="_blank" rel="noopener noreferrer">terms of use</a> and <a href="http://" target="_blank" rel="noopener noreferrer">privacy policy</a></label>
+                </div>
+                
+                <button id="btn" type="submit">Next</button>
+                <div id="progressBar" class="progressBar2"></div>
+                
+                <p id="createnew">Already have an account? <a href="http://" target="_blank" rel="noopener noreferrer">SIGN IN</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- <div id="page2">
+
+    </div> -->
+
+</body>
+</html>
+
+<script>
+
+// function changePass(){
+    
+// }
+
+</script>
