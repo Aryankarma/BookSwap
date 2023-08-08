@@ -17,22 +17,26 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </head>
 <body>
     <div class="top">
         <div class="nav">
             <div class="links">
-                <a href="http://" target="_blank" rel="noopener noreferrer">Home</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">About</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">Shop</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">Contact</a>
+                <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Home</a>
+                <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">About</a>
+                <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Shop</a>
+                <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Contact</a>
             </div>
             <!-- <div class="profile"><a href=""><i class="fa-solid fa-user"></i></a></div> -->
             <div class="profile"> <a href=""><i class="fa-solid fa-user"></i></a></div>
         </div>
 
         <div class="headings">
-            <h1>Connecting Book Lovers<span>.</span></h1>
+            <h1 id="animH1">Connecting Book Lovers<span>.</span></h1>
             <h4>A world of literary treasures awaits <span>you</span>, just a doorstep away. With <span>BookSwap</span>, you can discover new books and authors, and connect with fellow <span>book lovers</span> in your community.</h4>
         </div>
 
@@ -73,7 +77,6 @@
                 <h4>Crime punishment</h4>
                 <p>Fyodor Dostoevsky</p>
                 <button type="button">GET</button>
-
             </div>
         </div>
     </div>
@@ -83,17 +86,132 @@
 
     <div class="about">
         <h1>About Us</h1>
-        <hr>
+        <hr id="hr">
         <h3>WHY WE DO WHAT WE DO</h3>
         <div class="bookShow">
-            <p id="leftP">We believe in the transformative power of books. Books can open our minds to new ideas, teach us about different cultures, and help us to connect with others. Our platform welcomes all book enthusiasts. </p>
-            <p id="rightP">We want to make books more accessible to everyone. Not everyone can afford to buy new books, and many people simply don't have the space to store them. BookSwap allows people to share their books with others, making them more affordable and sustainable.</p>
+            <!-- <p id="leftP">We believe in the transformative power of books. Books can open our minds to new ideas, teach us about different cultures, and help us to connect with others. Our platform welcomes all book enthusiasts. </p>
+            <p id="rightP">We want to make books more accessible to everyone. Not everyone can afford to buy new books, and many people simply don't have the space to store them. BookSwap allows people to share their books with others, making them more affordable and sustainable.</p> -->
+        </div>
+        <div class="parent">
+                <div class="aboutBook">
+                    <h4>The BookSwap Story</h4>
+                    <hr>
+                    <p>We believe in the transformative power of books. Books can open our minds to new ideas, teach us about different cultures, and help us to connect with others. Our platform welcomes all book enthusiasts. 
+                    </p><br>
+                    <p>We want to make books more accessible to everyone. Not everyone can afford to buy new books, and many people simply don't have the space to store them. BookSwap allows people to share their books with others, making them more affordable and sustainable.</p>
+                </div>
+        </div>
+    </div>
+    <div style="height:50vh; background-color:rgba(0, 0, 0, 0.548);" class="emptySection">
+        
+    </div>
+    <div class="testimonials">
+        <h1>Our testimonials</h1>
+
+        <div class="testi1">
+            <h4>The support person have good knowledge…</h4>
+            <div class="starCont">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p>The support person have good knowledge and help with good suggestion on improving my setting that is extraordinary.</p>
+            <h6>Neeraj Singh</h6>
+        </div>
+
+        <div class="testi">
+            <h4>The support person have good knowledge…</h4>
+            <div class="starCont">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p>The support person have good knowledge and help with good suggestion on improving my setting that is extraordinary.</p>
+            <h6>Neeraj Singh</h6>
+        </div>
+
+        <div class="testi">
+            <h4>The support person have good knowledge…</h4>
+            <div class="starCont">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p>The support person have good knowledge and help with good suggestion on improving my setting that is extraordinary.</p>
+            <h6>Neeraj Singh</h6>
+        </div>
+
+        <div class="testi">
+            <h4>The support person have good knowledge…</h4>
+            <div class="starCont">
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p>The support person have good knowledge and help with good suggestion on improving my setting that is extraordinary.</p>
+            <h6>Neeraj Singh</h6>
         </div>
 
     </div>
-
     
 
     
 </body>
 </html>
+
+<script>
+    // trying GSAP 
+    // gsap.from("#animH1", {duration:.8, opacity:0, y:20, stagger:0.25, ease:"out"})
+    // gsap.from("#animID", {duration:.5, opacity:0, y:-20, stagger:0.25, ease:"power1"})
+    // // gsap.to("#animH1",{duration:2, x:10})
+    // gsap.from("#hr", {duration:1, width:"0"});
+    // gsap.to("#hr", {duration:3, width:"100%", ease:"power2 out"});
+</script>
