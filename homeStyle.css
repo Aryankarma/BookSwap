@@ -7,11 +7,14 @@
     --primary : #F2EEE4;
     --secondary : #20262E;
     --tertiary: #EF9648;
+    overflow-x:hidden;
 }
 html{
     /* scroll-behavior:smooth; */
+    overflow-x:hidden;
 }   
 body{
+    overflow-x:hidden;
     font-family: 'Inter', sans-serif;
 }
 .top{
@@ -128,7 +131,7 @@ body{
 .head{
     padding: 2rem;
 }
-.head h1,.about h1, .testimonials h1{
+.head h1,.about h1, .testimonials h1, .FAQ h1{
     font-size: 3rem;
     font-weight: 700;
     color: var(--secondary);
@@ -300,7 +303,7 @@ body{
     height: 30px;
     width: 100%;
     background: rgb(129, 129, 106);
-    transform: skewX(-47deg) translate(-40px,30px);
+    transform: skewX(-45deg) translate(-43.2px,30px);
 }
 .aboutBook h4{
     margin: 2rem;
@@ -318,35 +321,47 @@ body{
 /* book ends */
 
 .testimonials{
-    padding: 3rem;
-    
+    padding: 3rem 3rem 8rem 3rem;
 }
 .testimonials h1{
     margin-bottom: 6rem;
 }
+.wrapTesti{
+    display: flex;
+    flex-direction: row;
+    /* overflow-y: hidden; */
+    overflow: auto;
+    padding: 0;
+}
+/* .wrapTesti::-webkit-scrollbar{
+    visibility: hidden;
+} */
 .testi1{
     background-color: var(--primary);
-    width: 350px;
+    min-width: 25vw;
     padding: 2rem 4rem 2rem 2rem;
+    margin: 0 1.5rem 0 0;
 }
 .testi1 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 0 4rem 0;
 }
 .testi1 h6{
     font-size: .8rem;
 }
-.testi1{
+.testi{
     background-color: white;
-    outline: 1px solid black;
-    width: 350px;
+    border: 1px solid rgba(0,0,0,0.5);
+    min-width: 25vw;
     padding: 2rem 4rem 2rem 2rem;
+    margin: 0 1.5rem 0 0;
+    width: max-content;
 }
-.testi1 p{
-    font-size: 1.2rem;
+.testi p{
+    font-size: 1rem;
     margin: 0 0 4rem 0;
 }
-.testi1 h6{
+.testi h6{
     font-size: .8rem;
 }
 .starCont{
@@ -361,4 +376,50 @@ body{
 }
 .star i{
     color: white;
+    font-size: 0.85rem;
+    margin: 0.3rem;
+}
+.scrollBtn{
+    position: relative;
+}
+.scrollBtn button{
+    border: 0;
+    background-color: white;
+    float: right;
+    margin: 0.4em;
+}
+.circle{
+    border-radius: 100%;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: white;
+}
+/* .circleNext{
+
+}
+.circlePrev{
+
+} */
+.FAQ{
+    background-color: var(--primary);
+    padding: 4rem 0;
+}
+.FAQ p{
+    color: rgba(0,0,0,.75);
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+}
+.queries{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap:6rem;
+    row-gap: 1rem;
+}
+.query{
+    width: 37vw;    
+}
+.query p{
+    text-align: left;
+    margin: 1rem 0 2rem 0;
 }
