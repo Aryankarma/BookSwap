@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bookContainer{
+
+}
+.aboutBook{
+    /* background-color: white;
+    height: 600px;
+    width: 500px;
+    text-align: center;
+    font-family: verdana !important;
+    border-left: solid 30px var(--tertiary);
+    overflow:hidden;
+    box-shadow: -30px 30px 50px 5px black;
+    transform: rotate(-45deg) skewX(10deg) scale(0.8); */
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    background: #FFF;
+    border-left: 30px solid orange;
+    transform: rotate(-45deg) skewX(10deg) scale(.8);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+.aboutBook::before{
+    content: "";
+    width: 30px;
+    height: 100%;
+    background: rgb(200, 130,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-57px, -43px);
+}
+.aboutBook::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background: rgb(129, 129, 106);
+    transform: skewX(-47deg) translate(-40px,30px);
+}
+.aboutBook h4{
+    margin: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.aboutBook p{
+    font-size: large;
+    padding: 1.2rem 2.5rem;
+    text-align: justify
+}
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="bookContainer">
+            <div class="aboutBook">
+                <h4>The BookSwap Story</h4>
+                <p>We believe in the transformative power of books. Books can open our minds to new ideas, teach us about different cultures, and help us to connect with others. Our platform welcomes all book enthusiasts. 
+                </p><hr>
+                <p>We want to make books more accessible to everyone. Not everyone can afford to buy new books, and many people simply don't have the space to store them. BookSwap allows people to share their books with others, making them more affordable and sustainable.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

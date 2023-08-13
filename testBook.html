@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    background: #CCC
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page {
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    background: #FFF;
+    border-left: 30px solid #FF2929;
+    transform: rotate(-45deg) skewX(10deg) scale(.8);
+    box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5)
+}
+
+.page h1 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 25px;
+    color: #9e9e9e
+}
+
+.page p {
+    margin: 0;
+    padding: 0;
+    text-align: justify
+}
+
+.page:before {
+    content: "";
+    width: 30px;
+    height: 100%;
+    background: #8a0e0e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-57px, -43px) 
+}
+
+.page:after {
+    content: "";
+    width: 106%;
+    height: 30px;
+    background: #CCC;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(-11px, 30px) 
+}
+</style>
+</head>
+<body>
+    <div class="center">
+        <div class="page">
+            <h1>Mina Mounir</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque. Semper eget dauis at tellus at urna condimentum mattis. Ipsum nunc aliquet bibendum enim. Pellentesque massa placerat duis ultricies lacus. Sagittis id consectetur purus ut faucibus pulvinar elementum. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Dignissim convallis aenean et tortor at risus viverra adipiscing.<br> <br>
+            Suspendisse in est ante in nibh. Consectetur adipiscing elit ut aliquam purus sit amet luctus. Sed vulputate odio ut enim blandit volutpat maecenas volutpat. Eget nulla facilisi etiam dignissim diam quis. Velit euismod in pellentesque massa placerat duis ultricies. Tincidunt ornare massa eget egestas purus viverra accumsan. Purus viverra accumsan in nisl nisi scelerisque. A erat nam at lectus urna. Posuere ac ut consequat semper viverra. Montes nascetur ridiculus mus mauris vitae ultricies leo. Proin sed libero enim sed faucibus turpis in eu. Orci dapibus ultrices in iaculis nunc sed augue.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
