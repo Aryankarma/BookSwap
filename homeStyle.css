@@ -10,7 +10,7 @@
     overflow-x:hidden;
 }
 html{
-    /* scroll-behavior:smooth; */
+    scroll-behavior:smooth;
     overflow-x:hidden;
 }   
 body{
@@ -168,7 +168,8 @@ body{
 .insideBook{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    /* align-items: left; */
+    align-items: center;
 }
 .insideBook button{
     width: 5rem;
@@ -179,7 +180,7 @@ body{
     padding: .3rem;
     border: 0;
     border-radius: 5px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     position: absolute;
     bottom: 0;
 
@@ -196,7 +197,7 @@ body{
     font-size: 1.1rem;
 }
 .more{
-    padding: 3rem;
+    padding: 4.5rem;
     position: relative;
 }
 .more button{
@@ -250,9 +251,10 @@ body{
     color: var(--secondary);
     text-align: center;
     letter-spacing: .7rem;
+    margin-bottom: 1.5rem;
 }
 
-.bookShow{
+/* .bookShow{
     padding: 4rem 8rem;
     display: flex;
     justify-content: center;
@@ -263,7 +265,7 @@ body{
     font-size: 2.5rem;
     font-weight: 500;
     padding: 2.5rem;
-}
+} */
 
 
 
@@ -296,6 +298,7 @@ body{
     border-left: 30px solid orange;
     transform: rotate(-45deg) skewX(10deg) scale(.8);
     box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+    margin-top: 15rem;
 }
 .aboutBook::before{
     content: "";
@@ -321,7 +324,6 @@ body{
     font-size: 1.3rem;
     font-weight: 600;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 .aboutBook p{
     font-size: 1.2rem;
@@ -343,10 +345,12 @@ body{
     /* overflow-y: hidden; */
     overflow: auto;
     padding: 0;
+    /* behavior: smooth; */
+    scroll-behavior: smooth;
 }
-/* .wrapTesti::-webkit-scrollbar{
-    visibility: hidden;
-} */
+.wrapTesti::-webkit-scrollbar{
+   display: none;
+}
 .testi1{
     background-color: var(--primary);
     min-width: 25vw;
@@ -404,6 +408,9 @@ body{
     border: 1px solid black;
     padding: 1rem;
     background-color: white;
+    height: 15px;
+    width: 15px;
+    margin-top: 1rem;
 }
 /* .circleNext{
 
@@ -421,18 +428,18 @@ body{
     margin: 2rem 0 4rem 0;
 }
 .queries{
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-evenly;
     justify-items: center;
     column-gap:5rem;
-    row-gap: 1rem; */
+    row-gap: 1rem;
 
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     row-gap: 2rem;
     column-gap: 5rem;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
 }
 .query{
     width: 37vw;    
@@ -445,16 +452,22 @@ body{
 /* Footer */
 
 .footer{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5rem 2rem;
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content:space-evenly;
 }   
 .contact{
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 25vw;
 }
+#message, #name,#send{
+    width: 100%;
+    box-sizing: border-box;
+} 
 #name:placeholder-shown{
     outline: 0;
     border: 0;
@@ -512,7 +525,7 @@ legend{
     text-align: left;
 }
 table{
-    width: 50vw;
+    width: 45vw;
     text-align: left;
 }
 th{
@@ -528,7 +541,7 @@ a{
 
 /* Styles for dark footer */
 
-/* .footer{
+.footer{
     background-color: var(--secondary);
     color: white;
 }
@@ -546,11 +559,29 @@ a{
 #name, #message{
     background-color: var(--secondary);
     color: white;
-} */
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    /* visibility: hidden; */
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--secondary);
+}
+::-webkit-scrollbar-thumb{
+    /* box-shadow: 0 0 5px 10px var(--tertiary); */
+    border-radius: 10px;
+    background: var(--tertiary);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ec8d3b;
+    /* box-shadow: 0 0 5px 10px #ec8d3b; */
+}
 
 
 /* responsive */
-
 @media screen and (max-width: 1000px) and (min-width:600px){
     .books{
         /* grid-template-columns: repeat(3, 1fr); */
@@ -565,13 +596,27 @@ a{
         font-size: 1rem;
     }.book p{
         font-size: .8rem;
+    }.insideBook button{
+        position: absolute;
+        bottom: 20px;
+    }
+    .about h3{
+        font-size: 1.6rem;
+        word-spacing: 1.5rem;
+        letter-spacing: .5rem;
+    }
+    .footer a, th{
+        font-size: .8rem;
+    }
+    .contact{
+        width: 35vw;
     }
 }
 
 
 @media screen and (max-width: 600px) {
     .links a{
-        font-size: 3.25vw;
+        font-size: 3.5vw;
     }.profile a{
         font-size: 3.5vw;
         transform: translate(0, .5rem);
@@ -582,7 +627,7 @@ a{
     }
     .profile{
         right: 30px;
-        bottom: 50%;
+        bottom: 55%;
     }
     .headings{
         margin-top: 50px !important; 
@@ -600,21 +645,115 @@ a{
         position: relative;
     }
     .btn{
-        bottom: 1.2rem;
-        right: 1.2rem;
+        bottom: 1rem;
+        right: 1.5rem;
     }
-    .btn button{
-        padding: 15px;
+    .btn button,.more button{
+        padding: 15px 20px;
         font-size: .8rem;
+        width: auto;
     }
-    .head h1{
-        font-size: 10vw;
+    .head h1, .about h1, .testimonials h1, .FAQ h1{
+        font-size: 7.5vw;
+    }
+    .book{
+        text-align: center;
+        width: 40vw;
+        height: 15.5rem;
+    }
+    .insideBook{
+        align-items: center;
+    }
+    .book img{
+        height:150px;
+        margin-bottom: 0.2rem;
+    }
+    .book h4, .book p{
+        font-size: 15px;
     }
     .books{
         grid-template-columns: repeat(2, 1fr);
-
+        row-gap: 2rem;
     }
-
-
+    .more{
+        padding-top: 5rem;
+    }
+    .about h3{
+        font-size: 1rem;
+        word-spacing: .5rem;
+        letter-spacing: .25rem;
+        margin-bottom: 1.5rem;
+    }
+    .aboutBook{
+        margin-top: 2rem;
+        height: 75vw;
+        width: 40vw;
+    }
+    .aboutBook p{
+        font-size: 10.5px;
+        padding: 0;
+        margin: 0;
+    }
+   .aboutBook h4{
+        margin: 0 0 1rem 0;
+        font-size: 12px;
+    }
+    .emptySection{
+        height: 0 !important;
+    }
+    .about{
+        padding-bottom: 0;
+    } 
+    .testimonials h1{
+        margin-bottom: 4rem;
+    }
+    .testi1 h4,.testi h4{
+        font-size: .75rem;
+    }
+    .testi1 p, .testi p{
+            font-size: 0.7rem;
+    }
+    .star{
+        margin: 0.1rem;
+    }
+    .star i{
+        margin: 0.2rem;
+        font-size: 0.8rem;
+    }
+    .testi1, .testi{
+        min-width: 45vw;
+        padding: 1.5rem 2rem 1.5rem 1.5rem ;
+    }
+    .circle{
+        height: 7px;
+        width: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .FAQ > p{
+        font-size: .8rem;
+        padding: 0 2rem;
+    }
+    .queries{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-evenly;
+        justify-items: center;
+        row-gap: 1rem;
+    }
+    .query{
+        width: 80%;
+    }
+    .footer{
+        grid-template-columns: repeat(1, auto);
+    }
+    .contact{
+        width: 80vw;
+        margin-bottom: 1.5rem;
+    }
+    table{
+        width: 75vw;
+    }
 
 }

@@ -1,11 +1,10 @@
-var element = document.getElementsByClassName('wraptesti');
+const element = document.querySelector('.wrapTesti');
+const blocks = document.querySelector('.testi1');
 
-function scrollNext(e){
-  console.log(e)
-  element.scrollLeft += 20;
+function scrollNext(){
+  element.scrollLeft += blocks.clientWidth;
 } 
-function scrollPrev(e){
-  console.log(e);
-  element.scrollLeft += 20;
+function scrollPrev(){
+  element.scrollLeft -= blocks.clientWidth;
 }
 
