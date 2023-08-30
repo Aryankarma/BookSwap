@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profileStyle.css">
+    <title>User Profile</title>
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/04dc8a005d.js" crossorigin="anonymous"></script>
+
+    <!-- importing inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="links">
+            <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Home</a>
+            <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">About</a>
+            <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Shop</a>
+            <a id="animID" href="http://" target="_blank" rel="noopener noreferrer">Contact</a>
+        </div>
+        <!-- <div class="profile"><a href=""><i class="fa-solid fa-user"></i></a></div> -->
+        <div class="profile"> <a href=""><i class="fa-solid fa-user"></i></a></div>
+    </div>
+    <div class="mainContainer">
+        <div id="profile">
+            <img src="images/profilePhoto.jpg" alt="user profile image">
+                <button onclick="uploadBook()" class="btn" type="button">Upload Book</button>
+            <div class="inputBox">
+                <div>
+                    <h5>Name</h5>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <h5>Email</h5>
+                    <input type="text">
+                </div>
+                <div>
+                    <h5>Contact</h5>
+                    <input  type="tel" name="telphone" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"  title="Ten digits code" required/>
+                    
+                </div>
+                <div>
+                    <h5>Address</h5>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+        
+      <div id="bookUpload">
+        <div class="hideWhenClicked">
+            <h1 id="name">Aryan Karma</h1>
+
+            <div id="uploadHeading">
+                <p>Books Uploaded by you</p>
+                <p id="test" style="font-weight: 100;">Page <span id="page"></span></p>
+            </div>
+
+            <div class="grid">
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName" ></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+            </div>
+            <div class="scrollBtn">
+                <button onclick="nextBook()"><div class="circle circleNext"><i class="fa-solid fa-greater-than"></i></div></button>
+                <button onclick="prevBook()"><div class="circle circlePrev"><i class="fa-solid fa-less-than"></i></div></button>
+            </div>
+        </div>
+
+
+            <!-- id upload button click gets clicked  -->
+        <div class="showWhenClicked hide">                  
+            <h1 id="name">Aryan Karma</h1>
+            <div style="margin-bottom:2rem ;" id="uploadHeading">
+                <p>Upload Books</p>
+            </div>
+
+            <div class="inputBox2">
+                <div>
+                    <h5>Book Name</h5>
+                    <input type="text">
+                </div>
+
+                <div>
+                    <h5>Book Author</h5>
+                    <input type="text">
+                </div>
+                <div>
+                    <h5>Book Description</h5>
+                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                </div>
+
+                <div>
+                    <h5>Upload Image</h5>
+                    <div id="selectFile">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h5>Drag and drop image</h5>
+                        <h3>Or</h3>
+                        <button id="btnSelect">Select File</button>
+                    </div>
+                </div>
+                <button class="btn2" type="button">Upload Book</button>
+            </div>
+        </div>
+
+        </div>
+    </div>        
+    <div id="showError" style="display: none;">
+        <i style="font-size: 1.5rem; color: var(--tertiary); margin-right:1rem ;" class="fa-solid fa-circle-exclamation"></i> <p style="color: black;">No more books uploaded by you</p>
+    </div>
+</body>
+</html>
