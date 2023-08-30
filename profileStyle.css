@@ -195,6 +195,18 @@ textarea{
     display: flex;
     align-items: center;
 }
+#showSuccess{
+    position: absolute;
+    top: 3rem;
+    right: 50vw;
+    transform: translateX(50%);
+    background-color: rgb(190, 229, 190);
+    outline: 3px solid lightgreen;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
 .hideWhenClicked, .showWhenClicked{
     display: flex;
     gap: 1.5rem;
@@ -240,4 +252,9 @@ textarea{
     background-color: var(--primary);
     color: var(--secondary);
     font-weight: bold !important;
+}
+.btn2:hover{
+    background-color: var(--tertiary);
+    transition: 300ms;
+    box-shadow: 0 0 15px black;
 }

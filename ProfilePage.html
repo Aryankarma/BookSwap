@@ -42,21 +42,21 @@
             <div class="inputBox">
                 <div>
                     <h5>Name</h5>
-                    <input type="text">
+                    <input type="text" value="Aryan Karma">
                 </div>
 
                 <div>
                     <h5>Email</h5>
-                    <input type="text">
+                    <input type="text" value="aryankarma20@gmail.com">
                 </div>
                 <div>
                     <h5>Contact</h5>
-                    <input  type="tel" name="telphone" placeholder="888 888 8888" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="12"  title="Ten digits code" required/>
+                    <input value="888-8888-888" type="tel" name="telphone" pattern="" maxlength="12"  title="Ten digits code" required/>
                     
                 </div>
                 <div>
                     <h5>Address</h5>
-                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <textarea placeholder="City: New Delhi State: Delhi Postal Code: 110001 Country: India" name="" id="" cols="30" rows="5"></textarea>
                 </div>
             </div>
         </div>
@@ -98,35 +98,37 @@
             <!-- id upload button click gets clicked  -->
         <div class="showWhenClicked hide">                  
             <h1 id="name">Aryan Karma</h1>
-            <div style="margin-bottom:2rem ;" id="uploadHeading">
+            <div style="margin-bottom: 1rem;" id="uploadHeading">
                 <p>Upload Books</p>
             </div>
 
             <div class="inputBox2">
                 <div>
                     <h5>Book Name</h5>
-                    <input type="text">
+                    <input required type="text">
                 </div>
 
                 <div>
                     <h5>Book Author</h5>
-                    <input type="text">
+                    <input required type="text">
                 </div>
                 <div>
                     <h5>Book Description</h5>
-                    <textarea name="" id="" cols="30" rows="3"></textarea>
+                    <textarea required name="" id="" cols="30" rows="3"></textarea>
                 </div>
 
                 <div>
                     <h5>Upload Image</h5>
-                    <div id="selectFile">
+                    <div ondrop="drop(event)" ondragover="allowDrop(event)" draggable=”true” id="selectFile">
                         <i class="fa-solid fa-cloud-arrow-up"></i>
                         <h5>Drag and drop image</h5>
                         <h3>Or</h3>
-                        <button id="btnSelect">Select File</button>
+                        <button onclick="takeInput()" type="file" id="btnSelect">Select File</button>
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                        <!-- <input id="btnSelect" type="file" accept="image/*" name="" > -->
                     </div>
                 </div>
-                <button class="btn2" type="button">Upload Book</button>
+                <button onclick="uploadBook(); uploadSuccess()" class="btn2" type="button">Upload Book</button>
             </div>
         </div>
 
@@ -134,6 +136,9 @@
     </div>        
     <div id="showError" style="display: none;">
         <i style="font-size: 1.5rem; color: var(--tertiary); margin-right:1rem ;" class="fa-solid fa-circle-exclamation"></i> <p style="color: black;">No more books uploaded by you</p>
+    </div>
+    <div id="showSuccess" style="display: none;">
+        <i style="font-size: 1.5rem; color: var(--tertiary); margin-right:1rem ;" class="fa-solid fa-check"></i> <p style="color: black;">Book Uploaded</p>
     </div>
 </body>
 </html>

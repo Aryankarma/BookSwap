@@ -31,6 +31,12 @@ function booksEnd(){
     document.getElementById("showError").style.display = "none";
   }, 2000);
 }
+function uploadSuccess(){
+  document.getElementById("showSuccess").style.display = "flex";
+  setTimeout(() => {
+    document.getElementById("showSuccess").style.display = "none";
+  }, 2000);
+}
 
 function updatePagePrev(){
   if(pageNumber == 1){
@@ -63,6 +69,34 @@ function updateBooks(pageNumber){
 
 updateBooks(pageNumber);
 
-function uploadBook(){
-  // document.getElementsByClassName("showWhenClicked").
+function uploadBook(num){
+  // document.getElementsByClassName("showWhenClicked").classList.remove("hide");
+  // document.getElementsByClassName("hideWhenClicked").classList.add("hide");
+  const element1 = document.getElementsByClassName("hideWhenClicked")[0];
+  const element2 = document.getElementsByClassName("showWhenClicked")[0];
+  // element1.classList.add("hide");
+  // element2.classList.remove("hide");
+
+  const currentClass1 = element1.classList.contains("hide");
+
+  // If element1 has the "hide" class, remove it
+  if (currentClass1) {
+    element1.classList.remove("hide");
+  } else {
+  // Otherwise, add the "hide" class to element1
+    element1.classList.add("hide");
+  }
+  // Check the current class of element2
+  const currentClass2 = element2.classList.contains("hide");
+  // If element2 has the "hide" class, remove it
+  if (currentClass2) {
+    element2.classList.remove("hide");
+  } else {
+  // Otherwise, add the "hide" class to element2
+    element2.classList.add("hide");
+  }
+}
+
+function takeInput(){
+  document.getElementById("imageInput").click();
 }
