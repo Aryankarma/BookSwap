@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* color palette */
+:root{
+    --primary : #F2EEE4;
+    --secondary : #20262E;
+    --tertiary: #EF9648;
+    overflow-x:hidden;
+}
+html{   
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}   
+body{
+    overflow-x:hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary);
+}
+.book{
+    width: 25vw;
+}
+.book img{
+    width: 100%;
+}
+
+button{
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    color: white;
+    border: 1.5px solid var(--secondary);
+    background-color: var(--secondary);
+    font-size: large;
+}
+button:hover{
+    color: #EF9648;
+    outline: 0;
+    border-color: transparent;  
+    transition: .5s;
+}
+.main{
+    margin: 0 auto;
+    margin-top: 5rem;                           /* remove this margin */
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+}
+h1{
+    font-weight: 600;
+    text-decoration: underline;
+}
+h3{
+    font-weight: 300;
+}
+.bookDetail{
+    width: 35vw;
+    display: grid;
+    gap: 1rem;
+}
+span{
+    font-weight: 500;
+}
+
+/* tablet */
+@media screen and (max-width:1024px){
+    .bookDetail{
+        width: 40vw;
+    }
+    .main{                   
+        width: 75vw;
+    }
+    .book{
+        width: 30vw;
+    }
+    h3,span{
+        font-size: medium;
+    }
+}
+
+/* landscape mobile device */
+@media screen and (max-width:770px){
+    .bookDetail{
+        width: 42vw;
+    }
+    .main{                   
+        width: 85vw;
+    }
+    .book{
+        width: 35vw;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h3,span{
+        font-size: medium;
+    }
+}
+
+/* mobile device */
+@media screen and (max-width: 580px){
+    .bookDetail{
+        width: 42vw;
+    }
+    .main{                   
+        width: 85vw;
+    }
+    .book{
+        width: 35vw;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h3,span{
+        font-size: medium;
+    }
+}
