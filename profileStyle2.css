@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* color palette */
+:root{
+    --primary : #F2EEE4;
+    --secondary : #20262E;
+    --tertiary: #EF9648;
+    overflow-x:hidden;
+}
+html{   
+    scroll-behavior:smooth; 
+    overflow-x:hidden;
+}   
+body{
+    overflow-x:hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary);
+    /* background-color: #F2EEE4; */
+    /* height: 100vh; */
+
+    /* additional styles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#profileSection{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 20px;
+    margin-top: 2rem ;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.bookAdd{
+    background-color: #EF9648;
+    color: black;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+}
+.bookAdd:hover{
+    box-shadow: 0 0 10px #ef9648b4;
+    transition: 300ms ease-in-out;
+}
+#circle{
+    background-color: #3D81DB;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+}
+.light{
+    font-weight: 200 !important;
+}
+.hide{
+    display: none !important;
+}
+.block{
+    width: 75%;
+}
+#about1, #about2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    letter-spacing: 1px;
+    width: 70%;
+    gap: 1.5rem;
+}
+.bold{
+    font-weight: 600;
+}
+#btnEdit{
+    padding: 0.5rem 0.7rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 50px;
+    color: grey;
+    background-color: white;
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.selectEdit:hover,.selectClose:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 300ms ease-in-out;
+}
+#bookUpload{
+    width: 80vw;
+    padding: 1.5rem;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 10px;
+    margin-top: 3rem;
+}
+/* #name{
+    font-size: 65px;
+    font-weight: 100;
+} */
+#uploadHeading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 300 !important;
+    padding-bottom: 2rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.grid img{
+    height: 175px;
+    width: 125px;
+    background-size: cover;
+}
+.scrollBtn{
+    position: relative;
+    width: 100%;
+    margin-top:0;
+}
+.scrollBtn button{
+    color: white;
+    border: 0;
+    float: right;
+    margin: 0.4em;
+    background-color: transparent;
+}
+.circle{
+    border: 1px solid white;
+    padding: 1rem;
+    background-color: transparent;
+    height: 15px;
+    width: 25px;
+    margin-top: 1rem;
+}
+.circle:hover{
+    background-color: #181c22;
+    transition: 200ms;
+    border: 1px solid transparent;
+}
+#showError{
+    position: absolute;
+    top: 3rem;
+    right: 50vw;
+    transform: translateX(50%);
+    background-color: #f0d2b7;
+    outline: 3px solid var(--tertiary);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+#showSuccess{
+    position: absolute;
+    top: 3rem;
+    right: 50vw;
+    transform: translateX(50%);
+    background-color: rgb(190, 229, 190);
+    outline: 3px solid lightgreen;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.showWhenClicked{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    letter-spacing: 1px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+#btnSelect{
+    font-weight: 200 !important;
+    letter-spacing: 2px;
+    background-color: white;
+    color: var(--secondary);
+    padding: .5rem 1.5rem;
+    border: 0;
+    border-radius: 50px;
+    margin-top: 0.2rem;
+}
+input, textarea{
+    text-indent: 10px;
+    width: 100%;
+    height: 1.25rem;
+    outline: 0;
+    box-shadow: 4px 4px 0px var(--secondary);
+    padding: 0.5rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 5px ;
+    width: 100%;
+}
+input:focus{
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+textarea{
+    height: auto !important;
+    resize: none;
+    width: 100%;
+}

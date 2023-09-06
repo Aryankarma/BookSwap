@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profileStyle2.css">
+    <title>Profile page</title>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/04dc8a005d.js" crossorigin="anonymous"></script>
+
+    <!-- importing inter font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div id="profileSection">
+        <!-- edit button -->
+        <button onclick="editBtm()" id="btnEdit" class="selectEdit" style="padding-right: 1rem;">Edit <i class="fa-solid fa-pencil"></i></button>
+        <!-- <button onclick="editBtm()" id="btnEdit" class="selectClose hide"><i class="fa-solid fa-close "></i></button> -->
+        <button onclick="editBtm()" id="btnEdit" class="selectClose hide">SAVE</button>
+        <div id="avatar">
+            <div id="circle"><h1>AK</h1></div>
+        </div>
+        
+        <div id="about1" class="">
+            <div class="block">
+                <h3 class="light">Full Name</h3>
+                <h3 class="bold">Aryan Karma</h3>
+            </div>
+            <div class="block">
+                <h3 class="light">Email</h3>
+                <h3 class="bold">Aryankarma20@gmail.com</h3>
+            </div>
+            <div class="block">
+                <h3 class="light">Phone nuumber</h3>
+                <h3 class="bold">+90 9085612565</h3>
+            </div>
+            <div class="block">
+                <h3 class="light">Address</h3>
+                <h3 class="bold">Vijay nagar, Indore</h3>
+            </div>
+        </div>
+        <div id="about2" class="hide">
+            <div class="block">
+                <h3 class="light">Full Name</h3>
+                <input type="text" name="Fullname" id="Fullname" value="Aryan Karma">
+            </div>
+            <div class="block">
+                <h3 class="light">Email</h3>
+                <input type="text" name="email" id="email" value="Aryankarma20@gmail.com">
+            </div>
+            <div class="block">
+                <h3 class="light">Phone nuumber</h3>
+                <input type="text" name="contact" id="contact" value="+91 9085612565">
+            </div>
+            <div class="block">
+                <h3 class="light">Address</h3>
+                <input type="text" name="address" id="address" value="Vijay nagar, Indore">
+            </div>
+        </div>
+
+
+        <div id="aboutEdit">    
+
+        </div>
+    </div>
+    <div id="bookUpload">
+        <div id="uploadHeading">
+            <p>Books Uploaded by you </p>
+            <button onclick="uploadBook2()" class="bookAdd">Add new book</button>
+            <p id="test" style="font-weight: 100; display: none;">Page <span id="page"></span></p>
+        </div>
+        
+        <div class="hideWhenClicked">
+            <div class="grid">
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName" ></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+                <div>
+                    <img class="book" src="" alt="">
+                    <p class="bookName"></p>
+                </div>
+            </div>
+            <div class="scrollBtn">
+                <button onclick="nextBook()"><div class="circle circleNext"><i class="fa-solid fa-greater-than"></i></div></button>
+                <button onclick="prevBook()"><div class="circle circlePrev"><i class="fa-solid fa-less-than"></i></div></button>
+            </div>
+        </div>
+        <div class="showWhenClicked hide">
+            <div class="block">
+                <h3 class="light">Book title</h3>
+                <input type="text" name="" id="" >
+            </div>
+            <div class="block">
+                <h3 class="light">Book author</h3>
+                <input type="text" name="" id="">
+            </div>
+            <div class="block" >
+                <h3 class="light">Book description</h3>
+                <input type="text" style="width: 100%;" name="" id="">
+                <!-- <textarea name="" id="" cols="30" rows="5"></textarea> -->
+            </div>
+                <!-- <br> -->
+            <div class="block">
+                <h3 class="light">Upload image</h3>
+                <button onclick="takeInput()" type="file" id="btnSelect">Select File</button>
+                <input type="file" id="imageInput" accept="image/*" hidden>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

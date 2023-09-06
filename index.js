@@ -2,6 +2,30 @@ const element = document.querySelector('.wrapTesti');
 const blocks = document.querySelector('.testi1');
 let pageNumber = 1;
 
+function takeInput(){
+  document.getElementById("imageInput").click();
+}
+
+function editBtm(){
+  var element1 = document.querySelector(".selectEdit");
+  var element2 = document.querySelector(".selectClose");
+  var section1 = document.querySelector("#about1");
+  var section2 = document.querySelector("#about2");
+
+  // showing details
+  if(section2.classList.contains("hide")){
+    section1.classList.add("hide");
+    section2.classList.remove("hide");
+    element1.classList.add("hide");
+    element2.classList.remove("hide");
+  }else{
+    section1.classList.remove("hide");
+    section2.classList.add("hide");  
+    element1.classList.remove("hide");
+    element2.classList.add("hide");
+  }
+
+}
 document.getElementById("page").innerHTML = pageNumber;  
 
 function scrollNext(){
@@ -97,6 +121,23 @@ function uploadBook(num){
   }
 }
 
-function takeInput(){
-  document.getElementById("imageInput").click();
+function uploadBook2(){
+  const element1 = document.getElementsByClassName("hideWhenClicked")[0];
+  const element2 = document.getElementsByClassName("showWhenClicked")[0];
+  const currentClass1 = element1.classList.contains("hide");
+
+  if (currentClass1) {
+    element1.classList.remove("hide");
+    document.querySelector(".bookAdd").innerHTML = "Add new book";
+  } else {
+    element1.classList.add("hide");
+  }
+  
+  const currentClass2 = element2.classList.contains("hide");
+  if (currentClass2) {
+    element2.classList.remove("hide");
+    document.querySelector(".bookAdd").innerHTML = "SAVE";
+  } else {
+    element2.classList.add("hide");
+  }
 }
