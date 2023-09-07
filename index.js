@@ -91,6 +91,28 @@ function updateBooks(pageNumber){
   }
 }
 
+function sliceText(){
+  const element1 = document.getElementsByClassName("bold")[0];
+  const element2 = document.getElementsByClassName("bold")[1];
+  const element3 = document.getElementsByClassName("bold")[2];
+  const element4 = document.getElementsByClassName("bold")[3];
+  let width = screen.width;
+  element1.innerHTML.length>15 && width<770 ? element1.innerHTML = element1.innerHTML.slice(0,15)+"..." : null;
+  element2.innerHTML.length>15 && width<770 ? element2.innerHTML = element2.innerHTML.slice(0,15)+"..." : null; 
+  element3.innerHTML.length>15 && width<770 ? element3.innerHTML = element3.innerHTML.slice(0,15)+"..." : null;
+  element4.innerHTML.length>15 && width<770 ? element4.innerHTML = element4.innerHTML.slice(0,15)+"..." : null;
+}
+
+function chngInnerHTML(){
+  let width = screen.width;
+  if(width<580){
+    document.querySelector("#chngHTML").innerHTML= "Books Uploaded";
+    document.querySelector(".bookAdd").innerHTML= "+";
+  }
+}
+
+chngInnerHTML();
+sliceText();
 updateBooks(pageNumber);
 
 function uploadBook(num){
